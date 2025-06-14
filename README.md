@@ -1,20 +1,20 @@
 # esp32-rfid-access-project
 ESP32-based RFID access control system with EEPROM state storage, relay control, LED and buzzer feedback.
 
-# 🔐 ESP32 RFID Access Control System
+# ESP32 RFID Access Control System
 
 This project is a simple RFID-based access control system using an ESP32. It reads RFID tags using the MFRC522 module and controls a relay based on authorized access. The system includes LED indicators, a buzzer for feedback, and persistent relay state storage using EEPROM.
 
-## 📦 Features
+## Features
 
-- ✅ Grants or denies access based on RFID UID.
-- 💾 Stores relay state in EEPROM (retained across resets).
-- 🔄 Toggles relay state (e.g., to unlock/lock a door).
-- 🔊 Buzzer + red LED for unauthorized access.
-- 🟢 Green LED indicates relay is active (ON).
-- 📟 Serial monitor for UID output and debugging.
+- Grants or denies access based on RFID UID.
+- Stores relay state in EEPROM (retained across resets).
+- Toggles relay state (e.g., to unlock/lock a door).
+- Buzzer + red LED for unauthorized access.
+- Green LED indicates relay is active (ON).
+- Serial monitor for UID output and debugging.
 
-## 🛠️ Hardware Used
+## Hardware Used
 
 - ESP32 (WROOM-32 or compatible)
 - RC522 RFID reader module (MFRC522)
@@ -25,7 +25,7 @@ This project is a simple RFID-based access control system using an ESP32. It rea
 - RFID Tag/Card
 - Breadboard & Jumper wires
 
-## 📚 Libraries Required
+## Libraries Required
 
 Install the following libraries via Arduino Library Manager:
 
@@ -33,7 +33,7 @@ Install the following libraries via Arduino Library Manager:
 - `EEPROM` (built-in with ESP32 board support)
 - `SPI` (built-in)
 
-## 🔌 Pin Configuration
+## Pin Configuration
 
 | Component      | ESP32 Pin |
 |----------------|-----------|
@@ -45,7 +45,7 @@ Install the following libraries via Arduino Library Manager:
 | RELAY          | 26        |
 | SPI (SCK/MOSI/MISO) | Default (18/23/19) |
 
-## 🔄 System Behavior
+## System Behavior
 
 - On startup:
   - Initializes hardware and reads the last saved relay state from EEPROM.
@@ -55,7 +55,7 @@ Install the following libraries via Arduino Library Manager:
   - Saves new state to EEPROM.
   - If not authorized, activates buzzer and red LED for a short alert.
 
-## 🔐 Change Authorized UID
+## Change Authorized UID
 
 Replace the UID in the code:
 ```cpp
